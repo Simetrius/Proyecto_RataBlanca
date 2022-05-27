@@ -1,0 +1,692 @@
+/* GRID INDEX Y BODY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: antiquewhite;
+    min-height: 100%;
+    background-image: url(../Images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.grid-contenedor > *{
+    border-radius: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.header{
+    grid-area: header;
+
+}
+
+.main-index{
+    grid-area: main;
+
+}
+
+.tabla{
+    grid-area: tabla;
+
+}
+
+.patrocinadores{
+    grid-area: patrocinadores;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.footer{
+    grid-area: footer;
+
+}
+
+.grid-contenedor-index{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header" 100px
+    "main" auto
+    "tabla" auto
+    "patrocinadores" 50px
+    "footer" 150px;
+}
+
+.footer{
+    background-color: black;
+    display: grid;
+    grid-template:
+    "box1 box3" auto
+    "box2 box4" auto;
+    padding: 0;
+}
+
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+.box4{
+    grid-area: box4;
+}
+
+@media (min-width: 768px){
+    .grid-contenedor-index{
+        grid-template:
+        "header header" 100px
+        "main main" auto
+        "tabla tabla" auto
+        "patrocinadores patrocinadores" 50px
+        "footer footer" 150px /
+        500px auto;
+    }
+
+    .patrocinadores{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .patrocinadores picture{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedor-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1200px){
+    .grid-contenedor-index{
+        grid-template:
+        "header header header" 100px
+        "main   main   patrocinadores" auto
+        "tabla  tabla patrocinadores" auto
+        "footer footer footer" 150px /
+        500px auto 200px;
+    }
+
+    .patrocinadores{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .patrocinadores picture{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer{
+        grid-template:
+        "box1 box2 box3" auto
+        "box4 box4 box4" auto;
+    }
+}
+
+.header{
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-image:url(../Images/guitarra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+}
+
+.header nav ul li{
+    display: inline-block;
+    margin: 1rem;
+    list-style: none;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.header .titulo{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+}
+
+.menu-icono img{
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+}
+
+.menu-icono, #check{
+    display: none;
+}
+
+.main-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.main-index h2{
+    padding: 20px;
+    text-align: center;
+}
+
+.video{
+    padding: 20px;
+}
+
+.texto-principal{
+    padding: 20px;
+}
+
+.tabla{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tabla h3{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.tabla-contenedor{
+    border: solid 1px antiquewhite;
+
+}
+
+th, td{
+    border: solid 1px antiquewhite;
+    text-align: center;
+    padding: 10px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #222;
+}
+
+aside picture img{
+    height: 50px;
+    width: auto;
+}
+
+
+.footer div figure a img{
+    width: 250px;
+    height: auto;
+}
+
+.box1, .box2, .box3, .box4{
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+}
+
+@media (max-width:900px){
+    .check-boton{
+        display: block;
+    }
+    .menu-icono{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 99px;
+        left: -100%;
+        background: #222;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    nav ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        transition: all 0.75s;
+    }
+}
+/* FIN INDEX BODY */
+
+/* GRID BANDA */
+
+.grid-contenedor-banda{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header"
+    "main-banda"
+    "patrocinadores-banda"
+    "footer";
+}
+
+.main-banda{
+    grid-area:main-banda;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-banda h2{
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;
+}
+
+.main-banda picture{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda picture .nuestra-banda{
+    height: 450px;
+    width: auto;
+}
+
+.main-banda .texto-principal{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda .musicos .guitarrista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;    
+}
+
+.main-banda .musicos h3{
+    text-align: center;
+}
+
+.main-banda .musicos .guitarrista .box-articulo{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda .musicos .guitarrista .box-articulo .foto-musico img{
+    height: 400px;
+    width: auto;
+}
+
+.main-banda .musicos .cantante{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;    
+}
+
+.main-banda .musicos h3{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.main-banda .musicos .cantante .box-articulo{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda .musicos .cantante .box-articulo .foto-musico img{
+    height: 300px;
+    width: auto;
+}
+
+.main-banda .musicos .baterista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;    
+}
+
+.main-banda .musicos .baterista .box-articulo{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda .musicos .tecladista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;    
+}
+
+.main-banda .musicos .tecladista .box-articulo{
+    text-align: center;
+    padding: 30px;
+}
+
+.main-banda .musicos .bajista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;    
+}
+
+.main-banda .musicos .bajista .box-articulo{
+    text-align: center;
+    padding: 30px;
+}
+
+.patrocinadores-banda{
+    grid-area:patrocinadores-banda;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (min-width: 1200px){
+    .main-banda .musicos .guitarrista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .cantante{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .baterista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .tecladista{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .bajista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-banda .musicos h3{
+        padding-bottom: 50px;
+    }
+}
+/* FIN BANDA */
+
+/* DISCOGRAFIA */
+.grid-contenedor-discografia{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header"
+    "main-discografia"
+    "patrocinadores-discografia"
+    "footer"
+}
+
+.main-discografia{
+    grid-area: main-discografia;
+}
+
+.patrocinadores-discografia{
+    grid-area: patrocinadores-discografia;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.patrocinadores-discografia picture img{
+    display: flex;
+}
+
+.main-discografia .discografia ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-discografia .discografia ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.main-discografia .discografia ul li img{
+    width: 250px;
+    height: 250px;
+}
+
+.main-discografia .discografia h2{
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-discografia .discografia h3{
+    text-align: center;
+}
+
+.main-discografia .discografia .contenedor-spotify{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-discografia .discografia .contenedor-spotify img{
+    width: 300px;
+    height: auto;
+}
+
+@media (min-width: 1200px){
+    .grid-contenedor-discografia{
+        grid-template:
+        "header header" 100px
+        "main-discografia patrocinadores-discografia" auto
+        "footer footer " 150px/
+        auto 200px;
+    }
+
+    .patrocinadores-discografia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .patrocinadores-discografia picture{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* FIN DISCOGRAFIA */
+
+/* GALERIA */
+.grid-contenedor-galeria{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header"
+    "main-galeria"
+    "patrocinadores-galeria"
+    "footer"
+}
+
+.main-galeria{
+    grid-area: main-galeria;
+}
+
+.main-galeria h2{
+    text-align: center;
+    padding-top: 150px;
+}
+
+.main-galeria .galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 100px;
+}
+
+.main-galeria .galeria figure img{
+    height: 300px;
+    width: auto;
+    padding: 30px;
+}
+
+.patrocinadores-galeria{
+    grid-area: patrocinadores-galeria;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (min-width: 1200px){
+    .grid-contenedor-galeria{
+        grid-template:
+        "header header" 100px
+        "main-galeria patrocinadores-galeria" auto
+        "footer footer " 150px/
+        auto 200px;
+    }
+
+    .patrocinadores-galeria{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .patrocinadores-galeria picture{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* CONTACTO */
+.grid-contenedor-contacto{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header"
+    "main-contacto"
+    "patrocinadores-contacto"
+    "footer"
+}
+
+.main-contacto{
+    grid-area:main-contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-contacto h2{
+    margin-top: 100px;
+    padding: 30px;
+    text-align: center;
+}
+
+.main-contacto h3{
+    text-align: center;
+}
+
+.main-contacto .formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.main-contacto .formulario form{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;;
+    padding: 30px;
+}
+
+.main-contacto .formulario form label{
+    padding: 20px;
+}
+
+.main-contacto .formulario form input{
+    padding: 10px;
+}
+
+.patrocinadores-contacto{
+    grid-area: patrocinadores-contacto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (min-width: 1200px){
+    .grid-contenedor-contacto{
+        grid-template:
+        "header header" 100px
+        "main-contacto patrocinadores-contacto" auto
+        "footer footer " 150px/
+        auto 200px;
+    }
+
+    .patrocinadores-contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .patrocinadores-contacto picture{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* FIN CONTACTO */
