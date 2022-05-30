@@ -30,6 +30,7 @@ body{
 
 .header{
     grid-area: header;
+    z-index: 1;
 
 }
 
@@ -149,7 +150,7 @@ body{
 .header{
     width: 100%;
     padding: 20px;
-    overflow: hidden;
+    overflow: hidden !important;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -172,13 +173,34 @@ body{
 
 .header nav ul li{
     display: inline-block;
-    margin: 1rem;
+    margin: auto;
     list-style: none;
+    position: relative;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 0.3px solid white;
+    box-shadow: 0 0 25px #222;
+    backdrop-filter: blur(30px);
 }
 
 .header nav ul li a{
     text-decoration: none;
     color: antiquewhite;
+}
+
+.header nav ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s ease-out;
+}
+
+.header nav ul li:hover::before{
+    width: 100%;
 }
 
 .header .titulo{
@@ -194,6 +216,7 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .menu-icono, #check{
@@ -270,7 +293,7 @@ aside picture img{
     background-color: black;
 }
 
-@media (max-width:900px){
+@media (max-width:950px){
     .check-boton{
         display: block;
     }
@@ -302,6 +325,12 @@ aside picture img{
     #check:checked ~ ul{
         left: 0;
         transition: all 0.75s;
+    }
+    
+    .header nav ul li{
+        margin: 2rem;
+        border: none;
+        font-size: x-large;
     }
 }
 /* FIN INDEX BODY */
