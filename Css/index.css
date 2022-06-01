@@ -272,11 +272,10 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #222;
 }
 
 aside picture img{
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -509,6 +508,11 @@ aside picture img{
 
     .main-banda .musicos h3{
         padding-bottom: 50px;
+    }
+
+    aside picture img {
+        height: 75px;
+        width: auto;
     }
 }
 /* FIN BANDA */
