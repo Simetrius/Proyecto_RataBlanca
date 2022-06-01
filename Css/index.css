@@ -354,7 +354,7 @@ aside picture img{
 }
 
 .main-banda h2{
-    margin-top: 100px;
+    margin-top: 30px;
     padding: 30px;
     text-align: center;
 }
@@ -458,6 +458,26 @@ aside picture img{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.main-banda .slide{
+    max-width: 1000px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.main-banda .slide img{
+    object-fit: cover;
+}
+
+.main-banda .slide p{
+    box-shadow: 0 0 25px #222;
+    backdrop-filter: blur(30px);
+}
+
+.main-banda .slide h5{
+    box-shadow: 0 0 25px #222;
+    backdrop-filter: blur(30px);
 }
 
 @media (min-width: 1200px){
