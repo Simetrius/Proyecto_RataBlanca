@@ -1,0 +1,169 @@
+.grid-contenedor-banda{
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header"
+    "main-banda"
+    "patrocinadores-banda"
+    "footer";
+}
+
+.main-banda{
+    grid-area:main-banda;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & h2{
+        margin-top: 30px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    & picture{
+        text-align: center;
+        padding: 30px;
+
+        & .nuestra-banda{
+            height: 450px;
+            width: auto;
+        }
+    }
+
+    & .texto-principal{
+        text-align: center;
+        padding: 30px;
+    }
+
+    & .musicos h3{
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    & .musicos .guitarrista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px; 
+        
+        & .box-articulo{
+            text-align: center;
+            padding: 30px;
+
+            & .foto-musico img{
+                height: 400px;
+                width: auto;
+            }
+        }
+    }
+
+    & .musicos .cantante{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px; 
+        
+        & .box-articulo{
+            text-align: center;
+            padding: 30px;
+
+            & .foto-musico img{
+                height: 300px;
+                width: auto;
+            }
+        }
+    }
+
+    & .musicos .baterista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;   
+        
+        & .box-articulo{
+            text-align: center;
+            padding: 30px;
+        }
+    }
+
+    & .musicos .tecladista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px; 
+        
+        & .box-articulo{
+            text-align: center;
+            padding: 30px;
+        }
+    }
+
+    & .musicos .bajista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+        
+        & .box-articulo{
+            text-align: center;
+            padding: 30px;
+        }
+    }
+
+    & .slide{
+        max-width: 1000px;
+        margin-left: 20%;
+        margin-right: 20%;
+
+        & img{
+            object-fit: cover;
+        }
+
+        & p{
+            box-shadow: 0 0 25px #222;
+            backdrop-filter: blur(30px);
+        }
+
+        & h5{
+            box-shadow: 0 0 25px #222;
+            backdrop-filter: blur(30px);
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .main-banda .musicos .guitarrista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .cantante{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .baterista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .tecladista{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .main-banda .musicos .bajista{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-banda .musicos h3{
+        padding-bottom: 50px;
+    }
+
+    aside picture img {
+        height: 75px;
+        width: auto;
+    }
+}

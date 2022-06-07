@@ -1,0 +1,22 @@
+.footer{
+    grid-area: footer;
+    background-color: black;
+    display: grid;
+    grid-template:
+    "box1 box3" auto
+    "box2 box4" auto;
+    padding: 0;
+
+    & div figure a img{
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px){
+    .footer{
+        grid-template:
+        "box1 box2 box3" auto
+        "box4 box4 box4" auto;
+    }
+}
