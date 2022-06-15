@@ -1,6 +1,6 @@
 .footer{
     grid-area: footer;
-    background-color: black;
+    background-color: map-get($colors, secondary);
     display: grid;
     grid-template:
     "box1 box3" auto
@@ -13,10 +13,29 @@
     }
 }
 
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+.box4{
+    grid-area: box4;
+}
+
+.box1, .box2, .box3, .box4{
+    padding: 10px;
+    text-align: center;
+    background-color: map-get($colors, secondary);
+}
+
 @media (min-width: 1200px){
     .footer{
         grid-template:
-        "box1 box2 box3" auto
-        "box4 box4 box4" auto;
+        "box1 box2 box3"
+        "box4 box4 box4";
     }
 }

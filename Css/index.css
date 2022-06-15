@@ -29,13 +29,13 @@ body{
 
 
 .header{
-    grid-area: header;
+    grid-area:header;
     z-index: 1;
 }
 
 .main-index{
     grid-area: main;
-
+    margin-top: 130px;
 }
 
 .tabla{
@@ -60,11 +60,11 @@ body{
     display: grid;
     gap: 20px;
     grid-template:
-    "header" 100px
-    "main" auto
-    "tabla" auto
-    "patrocinadores" 50px
-    "footer" 150px;
+    "header"
+    "main"
+    "tabla"
+    "patrocinadores"
+    "footer"
 }
 
 .footer{
@@ -92,12 +92,11 @@ body{
 @media (min-width: 768px){
     .grid-contenedor-index{
         grid-template:
-        "header header" 100px
-        "main main" auto
-        "tabla tabla" auto
-        "patrocinadores patrocinadores" 50px
-        "footer footer" 150px /
-        500px auto;
+        "header header"
+        "main main"
+        "tabla tabla"
+        "patrocinadores patrocinadores"
+        "footer footer"
     }
 
     .patrocinadores{
@@ -121,17 +120,17 @@ body{
 @media (min-width: 1200px){
     .grid-contenedor-index{
         grid-template:
-        "header header header" 100px
-        "main   main   patrocinadores" auto
-        "tabla  tabla patrocinadores" auto
-        "footer footer footer" 150px /
-        500px auto 200px;
+        "header header header"
+        "main   main   patrocinadores"
+        "tabla  tabla patrocinadores"
+        "footer footer footer"
     }
 
     .patrocinadores{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-top: 130px;
     }
 
     .patrocinadores picture{
@@ -141,8 +140,8 @@ body{
 
     .footer{
         grid-template:
-        "box1 box2 box3" auto
-        "box4 box4 box4" auto;
+        "box1 box2 box3"
+        "box4 box4 box4";
     }
 }
 
@@ -350,6 +349,7 @@ aside picture img{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 130px;
 }
 
 .main-banda h2{
@@ -526,6 +526,7 @@ aside picture img{
 
 .main-discografia{
     grid-area: main-discografia;
+    margin-top: 130px;
 }
 
 .patrocinadores-discografia{
@@ -558,7 +559,6 @@ aside picture img{
 }
 
 .main-discografia .discografia h2{
-    margin-top: 100px;
     padding: 20px;
     text-align: center;
 }
@@ -581,10 +581,9 @@ aside picture img{
 @media (min-width: 1200px){
     .grid-contenedor-discografia{
         grid-template:
-        "header header" 100px
-        "main-discografia patrocinadores-discografia" auto
-        "footer footer " 150px/
-        auto 200px;
+        "header header"
+        "main-discografia patrocinadores-discografia"
+        "footer footer " 
     }
 
     .patrocinadores-discografia{
@@ -644,10 +643,9 @@ aside picture img{
 @media (min-width: 1200px){
     .grid-contenedor-galeria{
         grid-template:
-        "header header" 100px
-        "main-galeria patrocinadores-galeria" auto
-        "footer footer " 150px/
-        auto 200px;
+        "header header"
+        "main-galeria patrocinadores-galeria"
+        "footer footer "
     }
 
     .patrocinadores-galeria{
@@ -720,10 +718,9 @@ aside picture img{
 @media (min-width: 1200px){
     .grid-contenedor-contacto{
         grid-template:
-        "header header" 100px
-        "main-contacto patrocinadores-contacto" auto
-        "footer footer " 150px/
-        auto 200px;
+        "header header"
+        "main-contacto patrocinadores-contacto"
+        "footer footer "
     }
 
     .patrocinadores-contacto{

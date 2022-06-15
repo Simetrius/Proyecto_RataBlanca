@@ -21,7 +21,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: antiquewhite;
+        color: map-get($colors, primary);
     }
 
     & nav ul{
@@ -38,13 +38,13 @@
             position: relative;
             margin: 0.5rem;
             padding: 0.5rem 1rem;
-            border: 0.3px solid white;
+            border: 0.3px solid map-get($colors, alternative);
             box-shadow: 0 0 25px #222;
             backdrop-filter: blur(30px);
 
             & a{
                 text-decoration: none;
-                color: antiquewhite;
+                color: map-get($colors, primary);
             }
         }
 
@@ -52,7 +52,7 @@
             content: "";
             height: 3px;
             width: 0%;
-            background-color: yellowgreen;
+            background-color: map-get($colors, base);
             position: absolute;
             left: 0;
             bottom: -10px;
@@ -65,7 +65,19 @@
     }
 }
 
+.menu-icono img{
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.menu-icono, #check{
+    display: none;
+}
+
 @media (max-width:950px){
+
     .header nav ul{
         display: flex;
         flex-direction: column;
@@ -93,9 +105,15 @@
         display: block;
     }
 
+    .menu-icono{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
     #check:checked ~ ul{
         left: 0;
         transition: all 0.75s;
     }
-
 }
