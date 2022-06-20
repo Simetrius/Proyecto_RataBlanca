@@ -23,7 +23,6 @@
 .patrocinadores{
     grid-area: patrocinadores;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     padding: 20px;
 }
@@ -68,7 +67,6 @@ th, td{
 }
 
 
-
 @media (min-width: 768px){
     .grid-contenedor-index{
         grid-template:
@@ -81,7 +79,6 @@ th, td{
 
     .contenedor-flex{
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 }
