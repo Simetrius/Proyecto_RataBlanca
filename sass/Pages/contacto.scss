@@ -57,9 +57,9 @@
 @media (min-width: 1200px){
     .grid-contenedor-contacto{
         grid-template:
-        "header header"
-        "main-contacto patrocinadores-contacto"
-        "footer footer "
+        "header header header header"
+        "main-contacto main-contacto main-contacto patrocinadores-contacto"
+        "footer footer footer footer"
     }
 
     .patrocinadores-contacto{
@@ -67,6 +67,7 @@
         flex-direction: column;
         justify-content: space-around;
         margin-top: 130px;
+        padding: 20px;
     }
 
     .patrocinadores-contacto picture{
